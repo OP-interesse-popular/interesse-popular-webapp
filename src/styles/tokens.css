@@ -1,0 +1,178 @@
+/*
+ * Interesse Popular — Design Tokens v1.1
+ * Identidade compartilhada com Programadores pelo Interesse Popular (PIP)
+ * Dark-first; temas semânticos em CSS puro.
+ *
+ * Tipografia editorial: Source Serif 4 (manchetes), IBM Plex Sans (interface)
+ * e IBM Plex Mono (dados e números).
+ * Para produção, é possível hospedar as fontes localmente no projeto.
+ */
+
+/* Fontes hospedadas localmente para não depender de serviços externos. */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/SourceSerif4-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/SourceSerif4-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/SourceSerif4-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Cores fixas de marca: não mudam entre temas. */
+  --brand-red: #e33440;
+  --brand-black: #151515;
+  --brand-ivory: #f2eee8;
+
+  /* Tipografia */
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font-weight-display: 900;
+  --font-weight-heading: 700;
+  --font-weight-body: 400;
+  --font-weight-strong: 600;
+  --tracking-display: -0.035em;
+  --leading-display: 1.08;
+  --leading-body: 1.55;
+
+  /* Geometria */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  color-scheme: dark;
+
+  /* Ação principal e suas superfícies */
+  --color-primary: #f05260;
+  --color-on-primary: #141416;
+  --color-primary-container: #4a2027;
+  --color-on-primary-container: #ffdee1;
+
+  /* Ação secundária */
+  --color-secondary: #d7c7bf;
+  --color-on-secondary: #28232a;
+  --color-secondary-container: #373037;
+  --color-on-secondary-container: #f5eae4;
+
+  /* Base da interface */
+  --color-background: #151517;
+  --color-on-background: #f2eee8;
+  --color-surface: #1d1d21;
+  --color-on-surface: #f2eee8;
+  --color-surface-variant: #27272d;
+  --color-on-surface-variant: #b8b6b3;
+  --color-outline: #73747b;
+  --color-outline-variant: #3c3c43;
+
+  /* Navegação e estados */
+  --color-link: #ff848c;
+  --color-focus: #ffb4bd;
+  --color-success: #59d796;
+  --color-on-success: #11241a;
+  --color-warning: #f0bd68;
+  --color-on-warning: #221a0b;
+  --color-error: #ff8d93;
+  --color-on-error: #2a1116;
+  --color-info: #9bcbfa;
+  --color-on-info: #0d243d;
+}
+
+:root[data-theme="light"],
+[data-theme="light"] {
+  color-scheme: light;
+
+  --color-primary: #b91f30;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #ffdde1;
+  --color-on-primary-container: #631823;
+
+  --color-secondary: #5a5153;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e9e1dd;
+  --color-on-secondary-container: #30272a;
+
+  --color-background: #f7f4ef;
+  --color-on-background: #19191c;
+  --color-surface: #ffffff;
+  --color-on-surface: #19191c;
+  --color-surface-variant: #efeae5;
+  --color-on-surface-variant: #615d5c;
+  --color-outline: #8b8586;
+  --color-outline-variant: #d7d0cb;
+
+  --color-link: #a51d2b;
+  --color-focus: #b91f30;
+  --color-success: #17633e;
+  --color-on-success: #ffffff;
+  --color-warning: #805600;
+  --color-on-warning: #ffffff;
+  --color-error: #b3261e;
+  --color-on-error: #ffffff;
+  --color-info: #205b91;
+  --color-on-info: #ffffff;
+}
+
+/* Utilitários de tipografia editorial (classes opt-in). */
+.ip-headline {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+.ip-heading {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.15;
+}
+
+.ip-body {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-body);
+  line-height: var(--leading-body);
+}
+
+.ip-data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Programadores pelo Interesse Popular — estrela entre sinais de código</title>
+  <desc id="desc">Uma estrela vermelha de cinco pontas centralizada entre sinais de menor e maior brancos, sobre um quadrado arredondado preto.</desc>
+  <rect x="7" y="7" width="1010" height="1010" rx="208" fill="#19191C" stroke="#343439" stroke-width="14"/>
+  <path d="M303 333 L170 512 L303 691" fill="none" stroke="#F8F5EE" stroke-width="77" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M721 333 L854 512 L721 691" fill="none" stroke="#F8F5EE" stroke-width="77" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M512 335 L553.6 462.4 H687.6 L579.2 541.2 L620.6 668.6 L512 589.9 L403.4 668.6 L444.8 541.2 L336.4 462.4 H470.4 Z" fill="#E33440"/>
+</svg>
